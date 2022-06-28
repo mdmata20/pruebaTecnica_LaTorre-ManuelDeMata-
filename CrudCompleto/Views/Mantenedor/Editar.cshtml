@@ -1,0 +1,54 @@
+﻿@model ContactoModel
+@{
+    ViewData["Title"] = "Editar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="card">
+  <div class="card-header">
+    Editar Contacto
+  </div>
+  <div class="card-body">
+    <form  asp-action="Editar" asp-controller="Mantenedor" method="post">
+
+        <input asp-for="IdContacto" type="hidden" class="form-control">
+
+      <div class="mb-3">
+        <label class="form-label">Nombre</label>
+        <input asp-for="Nombre" type="text" class="form-control">
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Telefono</label>
+        <input asp-for="sueldos" type="text" class="form-control">
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Departamento</label>
+        <input asp-for="id_departamento" type="number" class="form-control">
+      </div>
+      <div class="mb-3">
+        <label class="form-label">puesto</label>
+        <input asp-for="puesto" type="text" class="form-control">
+      </div>
+      <div class="mb-3">
+        <label class="form-label">jerarquia</label>
+        <input asp-for="jerarquia" type="text" class="form-control">
+      </div>
+      <div class="mb-3">
+        <label class="form-label">fecha ingreso</label>
+        <input asp-for="fecha_ingreso" type="date" class="form-control">
+      </div>
+      <div class="mb-3">
+        <label class="form-label">fecha ultimo aumento</label>
+        <input asp-for="fecha_aumento" type="date" class="form-control">
+      </div>
+      <div class="mb-3">
+        <label class="form-label">fecha de baja</label>
+        <input asp-for="fecha_baja" type="date" class="form-control">
+      </div>
+      
+      <button type="submit" class="btn btn-primary">Editar Empleado</button>
+      <a asp-action="Listar" asp-controller="Mantenedor" class="btn btn-warming" >Volver a la Lista Usuario</a>
+    </form>
+  </div>
+</div>
+
